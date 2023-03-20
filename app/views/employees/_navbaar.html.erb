@@ -1,0 +1,32 @@
+
+<%#=javascript_include_tag "main"%>
+<%=stylesheet_link_tag "main"%>
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Employee-Details</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+    
+      <li class="nav-item">
+        <a class="nav-link" href="/employees/new">create-employee</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="/employees/show">show-employee</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/employees/update">update</a>
+      </li>
+     <li class="nav-item">
+        <%# <a class="nav-link" href="/employees/destroy">destroy</a> %>
+        <%# <a class="nav-link" href="/employees/destroy">destroy</a> %>
+        <%# <a class="nav-link" href="/employees/destroy">destroy</a> %>
+          <%#= link_to "delete", employee_path,:action=>"show", :controller=>"employees"%>
+      </li>
+     </ul>
+  </div>
+</nav>

@@ -1,0 +1,57 @@
+<%# <h1>Employees#index</h1>
+<p>Find me in app/views/employees/index.html.erb</p> %>
+
+<div class="card mt-5 mb-5">
+<div class="card-body">
+<h3 class="text-center"> Listing Employee </h3>
+<table>
+<thead>
+<style>
+  td, th,table {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  text-align:center;
+  border:5px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+<tr>
+   <th>S.no</th>
+   <th>first_name</th>
+   <th>last_name</th>
+   <th>Email</th>
+   <th>city</th>
+   <th>state</th>
+   <th>country</th>
+   <th> Pincode </th>
+   <th>Actions</th>
+   <th>Delete</th>
+ </tr>
+</thead>
+<tbody class="body">
+<tr>
+<% @employees.each do |employee|%>
+   
+  <%# @ids.each do |id| %>
+
+  
+  <td><%= employee.id %></td>
+  <td><%= employee.first_name%></td>
+  <td><%= employee.last_name%></td>
+  <td><%= employee.email%></td>
+  <td><%= employee.city%></td>
+  <td><%= employee.state%></td>
+  <td><%= employee.country%></td>
+  <td><%= employee.pincode%></td>
+  <td><%#= link_to "Edit", hello_path(employee)%></td>
+  <td><%#= link_to "Delete-employee",employee_path, method: :delete %></td>
+  <td><%#= link_to "Delete-employee",employ_path, method: :delete %></td>
+  <%#= link_to 'employee record', employee_path(@employee) %>
+  </tr>
+ <% end %>
+ </tbody>
+ </table>

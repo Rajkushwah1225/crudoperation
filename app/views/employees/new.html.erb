@@ -1,0 +1,45 @@
+<%=javascript_include_tag "create"%>
+<%#=link_to "pdf file",employees_path(format: 'pdf')%>
+<style>
+.my 
+text-align:center
+.center
+  margin-left: auto;
+  margin-right: auto;
+</style>
+<%= form_with model: @employee do |form|%>
+<table class="center">
+<div class="my">
+<%=form.label :first_name %><br>
+<%=form.text_field :first_name%>
+</div>
+<div>
+<%=form.label :last_name %><br>
+<%=form.text_field :last_name%>
+</div>
+<div>
+<%=form.label :email %><br>
+<%=form.email_field :email%>
+</div>
+<div>
+<%=form.label :city %><br>
+<%=form.text_field :city%>
+</div>
+<div>
+<%=form.label :state %><br>
+<%=form.text_field :state%>
+</div>
+
+<div>
+<%=form.label :country %><br>
+<%=form.text_field :country%>
+</div>
+<div>
+<%=form.label :Pincode %><br>
+<%=form.text_field :pincode%>
+</div>
+<div>
+<%=form.submit name:"create employee"%>
+</div>
+</table>
+<%end%>
